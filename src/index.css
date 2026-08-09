@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  scroll-behavior: smooth;
+}
+
+html, body {
+  background-color: #0D0F16;
+  color: #E6E8F0;
+}
+
+body {
+  font-family: 'IBM Plex Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: #7AA2F7;
+  color: #0D0F16;
+}
+
+/* scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #0D0F16;
+}
+::-webkit-scrollbar-thumb {
+  background: #262B3A;
+  border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #363C50;
+}
+
+/* visible keyboard focus everywhere */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid #7AA2F7;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.dot-grid {
+  background-image: radial-gradient(#262B3A 1px, transparent 1px);
+  background-size: 22px 22px;
+}
+
+.text-gradient {
+  background: linear-gradient(90deg, #7AA2F7 0%, #5DE4C7 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.editor-shadow {
+  box-shadow: 0 30px 80px -20px rgba(0,0,0,0.55), 0 0 0 1px #1B1F2C;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
