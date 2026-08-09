@@ -32,7 +32,7 @@ const LINKS = [
   },
   {
     label: "LeetCode",
-    value: "u/Rohit_8800",
+    value: "Rohit8800",
     href: profile.leetcode,
     icon: Code2,
   },
